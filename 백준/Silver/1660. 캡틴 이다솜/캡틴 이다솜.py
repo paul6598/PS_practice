@@ -17,6 +17,7 @@ for i in range(1,n+1):
   for j in k:
     if j < i:
       dp[i] = min(dp[i-j]+1,dp[i])
-      #print(dp)
+    else:
+      break
 
 print(dp[n])
