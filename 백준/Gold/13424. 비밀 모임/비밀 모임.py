@@ -1,7 +1,8 @@
 """
 플루이드 워셜
 """
-
+import sys
+input = sys.stdin.readline
 
 t = int(input())
 for _ in range(t):
