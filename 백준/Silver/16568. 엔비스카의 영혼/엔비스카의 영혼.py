@@ -1,8 +1,5 @@
 def sol(n,m,cnt):
-  res = 0
-  res += n//(m+1)
-  n %= m+1
-  return res+n+cnt
+  return n//(m+1)+n%(m+1)+cnt
 
 
 n,a,b = map(int,input().split())
