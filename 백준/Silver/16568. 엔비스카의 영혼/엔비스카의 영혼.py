@@ -1,6 +1,4 @@
 def sol(n,m,cnt):
-  if n <= m:
-    return cnt+n
   res = 0
   res += n//(m+1)
   n %= m+1
