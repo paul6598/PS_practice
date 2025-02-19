@@ -1,23 +1,16 @@
-def sol(n,m,cnt):
-  return n//(m+1)+n%(m+1)+cnt
-
-
 n,a,b = map(int,input().split())
 mxv, mnv = max(a,b), min(a,b)
 
 if mxv == 0:
   print(n)
 elif mnv == 0:
-  if n == 0:
-    print(0)
-  else:
-    print(sol(n,mxv,0))
+  print(n//(mxv+1)+n%(mxv+1))
 else:
   time = float("inf")
   cnt = 0
   while n >= 0:
     #print(n,mnv,sol(n,mnv,cnt))
-    time = min(time, sol(n,mnv,cnt))
+    time = min(time, n//(mnv+1)+n%(mnv+1)+cnt)
     n -= mxv+1
     cnt += 1
     
